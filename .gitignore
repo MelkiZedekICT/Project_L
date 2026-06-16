@@ -1,0 +1,7 @@
+# Compiled Object files
+*.o
+*.bin
+*.iso
+
+# Emulation logs
+*.log
