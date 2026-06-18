@@ -29,7 +29,7 @@ extern "C" void init_idt() {
     idtp.base = (uint32_t)&idt;
 
     uint8_t* p = (uint8_t*)&idt;
-    for(int i = 0; i < sizeof(idt_entry_t) * 256; i++) p[i] = 0;
+    for(unsigned int i = 0; i < sizeof(idt_entry_t) * 256; i++) p[i] = 0;
 
     asm volatile("lidt %0" : : "m" (idtp));
 }
